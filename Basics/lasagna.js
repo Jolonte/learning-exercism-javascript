@@ -1,15 +1,16 @@
 // lasagna.md -> Statement for this exercise.
 
 export const EXPECTED_MINUTES_IN_OVEN = 40;
+export const PREPARATION_MINUTES_PER_LAYER = 2;
 
 export function remainingMinutesInOven(actualMinutesInOven) {
     return EXPECTED_MINUTES_IN_OVEN - actualMinutesInOven 
 }
 
 export function preparationTimeInMinutes(numberOfLayers) {
-    return numberOfLayers * 2
+    return numberOfLayers * PREPARATION_MINUTES_PER_LAYER
 }
 
 export function totalTimeInMinutes(numberOfLayers, actualMinutesInOven) {
-    return (numberOfLayers * 2) + actualMinutesInOven
+    return (numberOfLayers * PREPARATION_MINUTES_PER_LAYER) + actualMinutesInOven
 }
